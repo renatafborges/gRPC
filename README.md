@@ -36,6 +36,9 @@ $ git clone https://github.com/renatafborges/gRPC
 $ sqlite3 db.sqlite
 sqlite> create table categories (id string, name string, description string);
 
+# To generate protofile
+$ protoc --go_out=. --go-grpc_out=. proto/course_category.proto
+
 # Run main.go to up gRPC server
 $ go run cmd/grpcserver/main.go  
 
